@@ -27,6 +27,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
+# WGG sensitive data
 ALLOWED_HOSTS = ['serene-hollows-8697.herokuapp.com']
 
 # Local time zone for this installation. Choices can be found here:
@@ -90,6 +91,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
+# WGG sensitive data
 SECRET_KEY = 'yk@kk3*6*8f70!!cvj_$&amp;hk23d89a^i@3mf=4fo4!p+mq-m2kp'
 
 # List of callables that know how to import templates from various sources.
