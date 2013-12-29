@@ -1,6 +1,8 @@
 # Django settings for microblog project.
 
 import os
+import dj_database_url
+
 # here() gives us file paths from the root of the system to the directory
 # holding the current file.
 here = lambda * x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
@@ -20,14 +22,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
+    'default': dj_database_url.config()
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
