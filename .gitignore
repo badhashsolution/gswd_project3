@@ -1,2 +1,9 @@
 *.pyc
 local.py
+.idea/.name
+.idea/encodings.xml
+.diea/microblog.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopx/scop_settings.xml
+.idea/vcs.xml
