@@ -4,3 +4,5 @@
 
 # 12/29/2013 10:37 AM WGG django working with "hello world" index.html and debug=false in Heroku.
 
+# 12/29/2013 11:21 AM WGG added blog section to admin on local site
+
