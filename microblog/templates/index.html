@@ -2,7 +2,7 @@
 {% load url from future %}
 
 {% block page_content %}
-<a href="{% url 'blog:list' %}">Read my blog</a> <!-- WGG namespaces are defined with a colon-->
-
+<div class="row-fluid">
+    <a href="{% url 'blog:list' %}" class="btn">Read my blog</a> <!-- WGG namespaces are defined with a colon-->
+</div>
 {% endblock %}
-<h1>Hello World!</h1>
