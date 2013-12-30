@@ -4,6 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from blog.views import blog_list, blog_detail
+from . import views
 
 admin.autodiscover()
 
@@ -16,6 +17,7 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    url(r'^$', views.HomepageView.as_view(), name="home"),
     url(r'^blog/$', blog_list, name="blog_list"),
     url(r"^blog/(?P<pk>\d+)/$", blog_detail, name = "blog_detail"),
 
