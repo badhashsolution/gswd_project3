@@ -3,7 +3,7 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 
-from blog.views import blog_list
+from blog.views import blog_list, blog_detail
 
 admin.autodiscover()
 
@@ -17,6 +17,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^$', blog_list),
+    url(r"^blog/(?P<pk>\d+)/$", blog_detail),
+
+
     url(r'^admin/', include(admin.site.urls)),
 
 )
