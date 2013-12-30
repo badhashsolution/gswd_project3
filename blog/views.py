@@ -28,4 +28,8 @@ def blog_detail(request, pk, *args, **kwargs):
         "post": post
     }
 
-    return render(request, template_name, context)
+class PostDetailView(DetailView):
+    model = Post
+    def get_queryset(self):
+        queryset = super(PostDetailView, self).get_queryset()
+        return queryset.filter(published=True)
