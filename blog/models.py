@@ -21,3 +21,7 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ("blog:detail", (), {"slug": self.slug})
