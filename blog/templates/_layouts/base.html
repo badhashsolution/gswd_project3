@@ -1,14 +1,26 @@
 <!doctype html>
-<meta charset=”utf-8”>
 <html>
     <head>
-            <title>{% block page_title %}{% endblock %}Microblog</title>
-            <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+        <meta charset=”utf-8”>
+        <title>{% block page_title %}Wes Gillis{% endblock %}</title>
+        <meta name="viewport" content="width=device, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
         <link rel="stylesheet" href="{{STATIC_URL  }}css/bootstrap-responsive.min.css">
+        <style>
+            body {
+                padding-top: 60px; /* container goes all the way to bottom of the top bar*/
+            }
+        </style>
     </head>
     <body>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
         <div class="container">
-            <h1>Welcome to my Site!</h1>
+            <h1>Wes Gillis</h1>
             {% block page_content %}{% endblock %}
         </div>
     </body>
