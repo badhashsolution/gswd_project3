@@ -5,4 +5,5 @@ from . import views
 urlpatterns = patterns('',
     url(r'^$', views.PostListView.as_view(), name="list"),
     url(r"^(?P<slug>[\w-]+)/$", views.PostDetailView.as_view(), name="detail"),
+    url(r'^blog/', views.PostListView.as_view(), name="list"),
 )
